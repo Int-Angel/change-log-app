@@ -1,10 +1,22 @@
-import { View, Text } from "react-native";
 import React from "react";
 
-export default function Login() {
+function Login() {
   return (
-    <View>
-      <Text>Login</Text>
-    </View>
+    <div className="dotBackground">
+      <div className="formContainer">
+        <div className="formWrapper">
+          <span className="logo">Change Log</span>
+          <span className="title">Login</span>
+          <form>
+            <input type="text" placeholder="username" />
+            <input type="password" placeholder="password" />
+            <button>Sign in</button>
+          </form>
+          <p>You don't have and account? Register</p>
+        </div>
+      </div>
+    </div>
   );
 }
+
+export default Login;
