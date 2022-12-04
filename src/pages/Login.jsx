@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate, Link } from "react-router-dom";
 
 function Login() {
   return (
@@ -12,7 +13,9 @@ function Login() {
             <input type="password" placeholder="password" />
             <button>Sign in</button>
           </form>
-          <p>You don't have and account? Register</p>
+          <p>
+            You don't have and account? <Link to="/register">Register</Link>
+          </p>
         </div>
       </div>
     </div>
