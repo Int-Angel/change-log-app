@@ -6,16 +6,19 @@ $button-color: #2CD997;
 
 $text-light-color: #57eeb4;
 $text-dark-color: #414141;
-$text-white-color: #ddddf7;
-
+$text-white-color: #bfbfbf;
 $text-gray-color: rgb(175,175,175);
 
-
-
-
+$done-color: #2CD997;
+$in-progress-color: #F4BA40;
+$todo-color: #1d8ccc;
 
 html, body, #root, .App {
     height: 100%;
+}
+
+p, h1, h2, h3, div {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .dotBackground{
@@ -107,3 +110,77 @@ html, body, #root, .App {
         }
     }
 }
+
+.projectContainer{
+    background-color: $white-color;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.108));
+    width: 280px;
+
+    .title{
+        color: $text-dark-color;
+    }
+    .date{
+        color: $text-white-color;
+        font-size: small;
+        align-self: flex-end;
+        margin-top: -30px;
+    }
+    .description{
+        color: $text-dark-color;
+        font-size: medium;
+    }
+}
+
+.progressPill{
+
+    display: flex;
+    align-items: center;
+
+    .progressPillContainer{
+        border-radius: 100px;
+        display: flex;
+    
+        align-items: center;
+        justify-content: center;
+    
+        height: 30px;
+        width: 100px;
+    
+        p{
+            font-size: smaller;
+            font-weight: bold;
+            color: $white-color;
+        }
+    }
+    
+    .circle{
+        border-radius: 100px;
+        height: 30px;
+        width: 30px;
+    }
+
+    ul{
+        margin: 0;
+        list-style: none;
+    }
+
+    li{
+        float: left;
+        margin: 2px;
+    }
+
+    .menu-item{
+        border: none;
+        border-radius: 100px;
+        color: $white-color;
+        height: 30px;
+        font-weight: bold;
+    }
+}
+
+
+
