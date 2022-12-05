@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { CgClose } from "react-icons/cg";
 
 function ProgressPill({ progress_ }) {
   const [open, setOpen] = useState(false);
@@ -47,9 +48,11 @@ function ProgressPill({ progress_ }) {
       ) : (
         <div
           className="circle"
-          style={stateMap[progress].color}
+          style={{ backgroundColor: "#333333" }}
           onClick={handleOpen}
-        />
+        >
+          <CgClose color="white" />
+        </div>
       )}
       {open ? (
         <ul className="menu">
