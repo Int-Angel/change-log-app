@@ -1,10 +1,10 @@
 import React from "react";
-import Project from "../components/Project";
+import ProjectList from "../components/ProjectList";
 
 function Home() {
   return (
     <div className="dotBackground">
-      <Project />
+      <ProjectList />
     </div>
   );
 }

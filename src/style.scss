@@ -16,6 +16,15 @@ $todo-color: #1d8ccc;
 html, body, #root, .App {
     height: 100%;
     color: $text-dark-color;
+
+    background-image: radial-gradient($dot-color 7%, transparent 10%);
+    background-color: $background-color;
+    
+    background-size: 20px 20px;
+    
+    height: 100%;
+    width: 100%;      
+    background-attachment: fixed;
 }
 
 p, h1, h2, h3, div {
@@ -23,13 +32,14 @@ p, h1, h2, h3, div {
 }
 
 .dotBackground{
-    background-image: radial-gradient($dot-color 7%, transparent 10%);
+   /* background-image: radial-gradient($dot-color 7%, transparent 10%);
     background-color: $background-color;
     
     background-size: 20px 20px;
     
     height: 100%;
-    width: 100%;
+    width: 100%;      
+    background-attachment: fixed;*/
 }
 
 .formContainer{
@@ -119,7 +129,7 @@ p, h1, h2, h3, div {
     display: flex;
     flex-direction: column;
     filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.108));
-    width: 280px;
+    width: 380px;
 
     .title{
         color: $text-dark-color;
@@ -137,9 +147,9 @@ p, h1, h2, h3, div {
 }
 
 .progressPill{
-
     display: flex;
-    align-items: center;
+    //align-items: center;
+    //margin: 0;
 
     .progressPillContainer{
         border-radius: 100px;
@@ -162,6 +172,7 @@ p, h1, h2, h3, div {
         border-radius: 100px;
         height: 30px;
         width: 30px;
+        margin: 0;
     }
 
     ul{
@@ -171,7 +182,7 @@ p, h1, h2, h3, div {
 
     li{
         float: left;
-        margin: 2px;
+        margin: 0;
     }
 
     .menu-item{
@@ -180,6 +191,11 @@ p, h1, h2, h3, div {
         color: $white-color;
         height: 30px;
         font-weight: bold;
+        margin: 0;
+    }
+
+    div{
+        margin: 0;
     }
 }
 
@@ -191,5 +207,19 @@ li{
     font-size: large;
 }
 
+.ProjectListContainer{
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+
+    .ProjectList{
+        list-style: none;
+        .projectItem{
+            float: left;
+            margin: 20px;
+        }
+    }
+}
 
