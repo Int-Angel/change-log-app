@@ -129,7 +129,9 @@ p, h1, h2, h3, div {
     display: flex;
     flex-direction: column;
     filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.108));
-    width: 380px;
+    width: 350px;
+
+    padding: 30px;
 
     .title{
         color: $text-dark-color;
@@ -150,6 +152,7 @@ p, h1, h2, h3, div {
     display: flex;
     //align-items: center;
     //margin: 0;
+    cursor: pointer;
 
     .progressPillContainer{
         border-radius: 100px;
@@ -173,6 +176,7 @@ p, h1, h2, h3, div {
         height: 30px;
         width: 30px;
         margin: 0;
+        cursor: pointer;
     }
 
     ul{
@@ -192,6 +196,7 @@ p, h1, h2, h3, div {
         height: 30px;
         font-weight: bold;
         margin: 0;
+        cursor: pointer;
     }
 
     div{
@@ -223,3 +228,43 @@ li{
     }
 }
 
+.ProfileContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 50px;
+    width: 50px;
+
+    border-radius: 100px;
+    background-color: $white-color;
+    filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.108));
+}
+
+.topBar{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px;
+
+    .profile{
+        align-self: flex-end;
+        margin-right: 50px;
+        cursor: pointer;
+    }
+}
+
+.signout{
+    background-color: $white-color;
+    color: #ff0000;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 40px;
+    margin-top: 10px;
+    filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.108));
+
+    position: absolute;
+    right: 10px;
+
+    cursor: pointer;
+}
