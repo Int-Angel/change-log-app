@@ -1,5 +1,6 @@
 import React from "react";
 import ProgressPill from "./ProgressPill";
+import UpdatesList from "./UpdatesList";
 
 function Project() {
   return (
@@ -14,6 +15,7 @@ function Project() {
         <p>Cards and ranking</p>
       </div>
       <ProgressPill progress_={1} />
+      <UpdatesList />
     </div>
   );
 }

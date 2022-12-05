@@ -15,6 +15,7 @@ $todo-color: #1d8ccc;
 
 html, body, #root, .App {
     height: 100%;
+    color: $text-dark-color;
 }
 
 p, h1, h2, h3, div {
@@ -180,6 +181,14 @@ p, h1, h2, h3, div {
         height: 30px;
         font-weight: bold;
     }
+}
+
+li{
+    margin: 5px;
+}
+
+.update{
+    font-size: large;
 }
 
 
