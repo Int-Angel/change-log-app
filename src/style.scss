@@ -251,6 +251,13 @@ li{
     width: 100%;
     margin: 20px;
 
+    align-items: center;
+    justify-content: center;
+
+    .searchbar{
+
+    }
+
     .profile{
         align-self: flex-end;
         margin-right: 50px;
@@ -271,4 +278,74 @@ li{
     right: 10px;
 
     cursor: pointer;
+}
+
+.searchbarContainer{
+    display: flex;
+    flex-direction: row;
+
+    height: 50px;
+    gap: 10px;
+    position: relative;
+    top: -30px;
+
+    .searchName{
+        input{
+            width: 400px;
+            height: 30px;
+
+            padding-left: 20px;
+
+            border: 1px solid $text-dark-color;
+            border-radius: 100px;
+
+            filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.108));
+
+            &:focus{
+                outline: none !important;
+                border:1px solid $button-color;
+                border-radius: 100px;
+            }
+        }
+    }
+
+    .searchCreator{
+        input{
+            width: 200px;
+            height: 30px;
+
+            padding-left: 20px;
+
+            border: 1px solid $text-dark-color;
+            border-radius: 100px;
+
+            filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.108));
+
+            &:focus{
+                outline: none !important;
+                border:1px solid $button-color;
+                border-radius: 100px;
+            }
+        }
+    }
+
+    .dates{
+        position: absolute;
+        margin-left: 700px;
+        input{
+            width: 85px;
+            padding-left: 20px;
+
+            border: 1px solid $text-dark-color;
+            border-radius: 100px;
+
+            filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.108));
+
+            &:focus{
+                outline: none !important;
+                border:1px solid $button-color;
+                border-radius: 100px;
+            }
+        }
+    }
 }
