@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { CgClose } from "react-icons/cg";
+import axios from "axios";
 
-function ProgressPill({ progress_ }) {
+function ProgressPill({ progress_, project_id }) {
   const [open, setOpen] = useState(false);
   const [progress, setProgress] = useState(0);
 
@@ -30,7 +31,28 @@ function ProgressPill({ progress_ }) {
 
   const handleDropdownClick = (newProgress) => {
     setProgress(newProgress);
+    updateProjectProgress(newProgress);
     setOpen(!open);
+  };
+
+  const updateProjectProgress = (newProgress) => {
+    const updateProjectURL = "http://localhost:8080/project/update";
+    const token = localStorage.getItem("token");
+    const projectPayload = {
+      project_status: newProgress,
+      project_id: project_id,
+    };
+    const config = {
+      headers: { Authorization: `Bearer ${token}` },
+    };
+    axios
+      .put(updateProjectURL, projectPayload, config)
+      .then((response) => {
+        console.log("UPDATE", project_id);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (

@@ -17,7 +17,10 @@ function Project({ project }) {
       <div className="description">
         <p>{project.description}</p>
       </div>
-      <ProgressPill progress_={project.project_status} />
+      <ProgressPill
+        progress_={project.project_status}
+        project_id={project.project_id}
+      />
       <UpdatesList updates={project.project_updates} />
     </div>
   );
