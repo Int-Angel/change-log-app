@@ -16,10 +16,12 @@ function Profile() {
       .then((response) => {
         console.log(response);
         window.location.href = "/login";
+        localStorage.setItem("token", false);
       })
       .catch((err) => {
         console.log(err);
         window.location.href = "/login";
+        localStorage.setItem("token", false);
       });
   };
 

@@ -1,5 +1,6 @@
 import "./style.scss";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Navigate, Routes, Route, BrowserRouter } from "react-router-dom";
+import RouteGuard from "./components/RouteGuard";
 
 import Register from "./pages/Register";
 import Login from "./pages/Login";
@@ -9,14 +10,28 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<RouteGuard />}>
+          <Route path="/" element={<Home />} />
+        </Route>
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+/**
+ * 
+ 
+    <BrowserRouter>
+      <Routes>
         <Route path="/">
-          <Route index element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
         </Route>
       </Routes>
     </BrowserRouter>
-  );
-}
+ */
 
 export default App;

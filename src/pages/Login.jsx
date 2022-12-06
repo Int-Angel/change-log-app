@@ -29,6 +29,7 @@ function Login() {
       .then((response) => {
         console.log(response);
         setErr(false);
+        localStorage.setItem("token", true);
         window.location.href = "/";
       })
       .catch((err) => {
