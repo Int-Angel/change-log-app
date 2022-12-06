@@ -73,6 +73,7 @@ function Register() {
             />
             <button>Sign up</button>
           </form>
+          {err ? <div className="error">Error</div> : null}
           <p>
             You do have an account? <Link to="/login">Login</Link>
           </p>

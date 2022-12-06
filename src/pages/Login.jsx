@@ -59,6 +59,7 @@ function Login() {
             />
             <button>Sign in</button>
           </form>
+          {err ? <div className="error">Error</div> : null}
           <p>
             You don't have and account? <Link to="/register">Register</Link>
           </p>
