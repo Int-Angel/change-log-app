@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import { CgSearch } from "react-icons/cg";
 import { AiOutlineClear } from "react-icons/ai";
+import { CgAdd } from "react-icons/cg";
 import axios from "axios";
 
 import "react-datepicker/dist/react-datepicker.css";
 
-function SearchBar({ setProjects }) {
+function SearchBar({ setProjects, handleCreateProject }) {
   const [projectName, setProjectName] = useState("");
   const [creator, setCreator] = useState("");
   const [startDate, setStartDate] = useState(new Date());
@@ -104,6 +105,9 @@ function SearchBar({ setProjects }) {
       </div>
       <div className="Clear" onClick={handleClear}>
         <AiOutlineClear size={30} />
+      </div>
+      <div className="Clear" onClick={handleCreateProject}>
+        <CgAdd size={30} />
       </div>
     </div>
   );

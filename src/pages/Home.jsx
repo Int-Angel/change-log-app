@@ -2,9 +2,20 @@ import React, { useEffect, useState } from "react";
 import ProjectList from "../components/ProjectList";
 import TopBar from "../components/TopBar";
 import axios from "axios";
+import { CgAdd } from "react-icons/cg";
+import CreateProjectForm from "../components/CreateProjectForm";
 
 function Home() {
   const [projects, setProjects] = useState([]);
+  const [showCreateForm, setShowCreateForm] = useState(false);
+
+  const handleCreateProject = () => {
+    setShowCreateForm(true);
+  };
+
+  const handleCloseCreateProject = () => {
+    setShowCreateForm(false);
+  };
 
   useEffect(() => {
     const getProjectsURL = "http://localhost:8080/project/get";
@@ -19,7 +30,13 @@ function Home() {
 
   return (
     <div className="dotBackground">
-      <TopBar setProjects={setProjects} />
+      <TopBar
+        setProjects={setProjects}
+        handleCreateProject={handleCreateProject}
+      />
+      {showCreateForm ? (
+        <CreateProjectForm closeForm={handleCloseCreateProject} />
+      ) : null}
       <ProjectList projects={projects} />
     </div>
   );
