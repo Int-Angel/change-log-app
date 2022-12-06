@@ -225,9 +225,10 @@ li{
 
     .ProjectList{
         list-style: none;
+        columns: 3;
         .projectItem{
-            float: left;
             margin: 20px;
+            break-inside: avoid;
         }
     }
 }
