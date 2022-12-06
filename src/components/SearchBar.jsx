@@ -4,7 +4,7 @@ import { CgSearch } from "react-icons/cg";
 
 import "react-datepicker/dist/react-datepicker.css";
 
-function SearchBar() {
+function SearchBar({ setProjects }) {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
 

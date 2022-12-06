@@ -1,12 +1,11 @@
 import React from "react";
 import Project from "./Project";
 
-function ProjectList() {
-  const projects = [1, 2, 3, 4, 5, 6, 7, 8];
-
+function ProjectList({ projects }) {
+  console.log(typeof projects);
   const listItems = projects.map((project) => (
-    <li className="projectItem">
-      <Project />
+    <li className="projectItem" key={project.project_id}>
+      <Project project={project} />
     </li>
   ));
   return (

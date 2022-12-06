@@ -11,17 +11,23 @@ function Profile() {
 
   const handleSignOut = () => {
     const signOutURL = "http://localhost:8080/auth/signout";
+    const token = localStorage.getItem("token");
+    const config = {
+      headers: { Authorization: `Bearer ${token}` },
+    };
     axios
-      .post(signOutURL)
+      .post(signOutURL, config)
       .then((response) => {
+        console.log("Success");
         console.log(response);
         window.location.href = "/login";
-        localStorage.setItem("token", false);
+        localStorage.setItem("token", null);
       })
       .catch((err) => {
+        console.log("Fail");
         console.log(err);
         window.location.href = "/login";
-        localStorage.setItem("token", false);
+        localStorage.setItem("token", null);
       });
   };
 

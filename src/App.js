@@ -20,18 +20,4 @@ function App() {
   );
 }
 
-/**
- * 
- 
-    <BrowserRouter>
-      <Routes>
-        <Route path="/">
-          <Route path="/" element={<Home />} />
-          <Route path="login" element={<Login />} />
-          <Route path="register" element={<Register />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
- */
-
 export default App;

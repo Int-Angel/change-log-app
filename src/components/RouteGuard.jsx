@@ -4,7 +4,7 @@ import Login from "../pages/Login";
 
 function RouteGuard({ element, path }) {
   function isAuth() {
-    return localStorage.getItem("token") === "true";
+    return localStorage.getItem("token") !== "null";
   }
   return isAuth() ? <Outlet /> : <Navigate to={{ pathname: "/login" }} />;
 }

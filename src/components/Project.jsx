@@ -2,7 +2,7 @@ import React from "react";
 import ProgressPill from "./ProgressPill";
 import UpdatesList from "./UpdatesList";
 
-function Project() {
+function Project({ project }) {
   return (
     <div className="projectContainer">
       <div className="title">

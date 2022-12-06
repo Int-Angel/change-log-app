@@ -27,9 +27,8 @@ function Login() {
     axios
       .post(signInURL, loginPayload)
       .then((response) => {
-        console.log(response);
         setErr(false);
-        localStorage.setItem("token", true);
+        localStorage.setItem("token", response.data.token);
         window.location.href = "/";
       })
       .catch((err) => {

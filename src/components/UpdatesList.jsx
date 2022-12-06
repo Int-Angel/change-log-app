@@ -37,7 +37,7 @@ function UpdatesList() {
   };
 
   const listItems = updates.project_updates.map((update) => (
-    <li className="update">
+    <li className="update" key={update.project_update_id}>
       <div className="updateDescription">{update.description}</div>
       <PointsList points={update.points} />
     </li>
