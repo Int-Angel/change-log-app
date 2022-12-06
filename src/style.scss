@@ -146,6 +146,20 @@ p, h1, h2, h3, div {
         color: $text-dark-color;
         font-size: medium;
     }
+
+    .addUpdate{
+        color: $text-dark-color;
+        cursor: pointer;
+        align-self: center;
+        margin-top: 10px;
+    }
+
+    .addPoint{
+        color: $text-gray-color;
+        cursor: pointer;
+        align-self: center;
+        margin-top: 10px;
+    }
 }
 
 .progressPill{
@@ -214,6 +228,9 @@ li{
 
 .update{
     font-size: large;
+    display: flex;
+    flex-direction: column;
+    margin-left: -35px;
 }
 
 .ProjectListContainer{

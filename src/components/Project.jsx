@@ -1,6 +1,7 @@
 import React from "react";
 import ProgressPill from "./ProgressPill";
 import UpdatesList from "./UpdatesList";
+import { CgAdd } from "react-icons/cg";
 
 function Project({ project }) {
   return (
@@ -22,6 +23,7 @@ function Project({ project }) {
         project_id={project.project_id}
       />
       <UpdatesList updates={project.project_updates} />
+      <CgAdd className="addUpdate" size={20} />
     </div>
   );
 }
