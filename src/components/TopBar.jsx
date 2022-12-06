@@ -8,7 +8,7 @@ function TopBar() {
       <div className="profile">
         <Profile />
       </div>
-      <div>
+      <div className="searchbar">
         <SearchBar />
       </div>
     </div>

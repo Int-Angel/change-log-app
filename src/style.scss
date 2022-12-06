@@ -254,12 +254,8 @@ li{
     align-items: center;
     justify-content: center;
 
-    .searchbar{
-
-    }
-
     .profile{
-        align-self: flex-end;
+        align-self: flex-start;
         margin-right: 50px;
         cursor: pointer;
     }
@@ -275,8 +271,6 @@ li{
     filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.108));
 
     position: absolute;
-    right: 10px;
-
     cursor: pointer;
 }
 
@@ -332,6 +326,14 @@ li{
     .dates{
         position: absolute;
         margin-left: 700px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        .dateTitle{
+            font-weight: bold;
+        }
+
         input{
             width: 85px;
             padding-left: 20px;
@@ -348,4 +350,21 @@ li{
             }
         }
     }
+}
+
+.Search{
+    cursor: pointer;
+    margin: 0;
+    margin-left: 400px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 50px;
+    width: 50px;
+
+    border-radius: 100px;
+    background-color: $white-color;
+    filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.108));
 }

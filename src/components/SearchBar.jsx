@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
+import { CgSearch } from "react-icons/cg";
 
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -17,16 +18,26 @@ function SearchBar() {
       </div>
 
       <div className="dates">
-        <DatePicker
-          selected={startDate}
-          placeholderText="Start Date"
-          onChange={(date) => setStartDate(date)}
-        />
-        <DatePicker
-          selected={endDate}
-          placeholderText="End Date"
-          onChange={(date) => setEndDate(date)}
-        />
+        <div>
+          <div className="dateTitle">Start date:</div>
+          <DatePicker
+            selected={startDate}
+            placeholderText="Start Date"
+            onChange={(date) => setStartDate(date)}
+          />
+        </div>
+        <div>
+          <div className="dateTitle">End date:</div>
+          <DatePicker
+            selected={endDate}
+            placeholderText="End Date"
+            onChange={(date) => setEndDate(date)}
+          />
+        </div>
+      </div>
+
+      <div className="Search">
+        <CgSearch size={30} />
       </div>
     </div>
   );
