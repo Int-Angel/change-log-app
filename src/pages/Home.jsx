@@ -14,7 +14,7 @@ function Home() {
     };
     axios.get(getProjectsURL, config).then((response) => {
       setProjects(JSON.parse(response.data.projects));
-      console.log(response.data.projects);
+      //console.log(response.data.projects);
     });
   }, []);
 

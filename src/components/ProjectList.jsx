@@ -2,7 +2,6 @@ import React from "react";
 import Project from "./Project";
 
 function ProjectList({ projects }) {
-  console.log(typeof projects);
   const listItems = projects.map((project) => (
     <li className="projectItem" key={project.project_id}>
       <Project project={project} />

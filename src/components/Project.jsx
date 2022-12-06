@@ -6,16 +6,19 @@ function Project({ project }) {
   return (
     <div className="projectContainer">
       <div className="title">
-        <h1>Game 1</h1>
+        <h1>{project.name}</h1>
       </div>
       <div className="date">
-        <p>October 22 , 2020</p>
+        <p>{project.creator.username}</p>
+      </div>
+      <div className="date">
+        <p>{project.publication_date}</p>
       </div>
       <div className="description">
-        <p>Cards and ranking</p>
+        <p>{project.description}</p>
       </div>
-      <ProgressPill progress_={1} />
-      <UpdatesList />
+      <ProgressPill progress_={project.project_status} />
+      <UpdatesList updates={project.project_updates} />
     </div>
   );
 }
