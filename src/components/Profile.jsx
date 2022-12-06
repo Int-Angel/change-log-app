@@ -22,6 +22,7 @@ function Profile() {
         console.log(response);
         window.location.href = "/login";
         localStorage.setItem("token", null);
+        localStorage.setItem("user_id", null);
       })
       .catch((err) => {
         console.log("Fail");

@@ -29,6 +29,7 @@ function Login() {
       .then((response) => {
         setErr(false);
         localStorage.setItem("token", response.data.token);
+        localStorage.setItem("user_id", response.data.app_user_id);
         window.location.href = "/";
       })
       .catch((err) => {
