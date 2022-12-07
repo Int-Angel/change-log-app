@@ -32,6 +32,8 @@ Back-End: [ChangeLogAPI](https://github.com/Int-Angel/ChangeLogAppAPI)<br />
 
 ## Video
 
+Click to reproduce:
+
 [![Watch the video](https://i.imgur.com/K5lpj7s.png)](https://youtu.be/YvhMqauyS3s)
 
 ## Images
