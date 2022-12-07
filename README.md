@@ -30,6 +30,10 @@ Back-End: [ChangeLogAPI](https://github.com/Int-Angel/ChangeLogAppAPI)<br />
 4. run "npm install"<br />
 5. run "npm start"<br />
 
+## Video
+
+[![Watch the video](https://i.imgur.com/K5lpj7s.png)](https://youtu.be/YvhMqauyS3s)
+
 ## Images
 
 ![SignIn](https://i.imgur.com/L2z7MW6.png)
