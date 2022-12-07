@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { CgClose } from "react-icons/cg";
 import axios from "axios";
+import Point from "./Point";
 
 function PointsList({ points }) {
   const [list, setList] = useState(points);
@@ -24,7 +25,7 @@ function PointsList({ points }) {
   const listItems = list.map((point) => (
     <li className="point" key={point.point_id}>
       <div className="pointContainer">
-        <div className="pointDescription">{point.description}</div>
+        <Point point={point} />
         <CgClose
           className="deletePoint"
           onClick={() => handleDeletePoint(point.point_id)}
