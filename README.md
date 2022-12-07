@@ -1,71 +1,42 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a RESTful API for a Change Log App. This app allows a product manager or engineer to post projects/products updates for the team to see. This helps the team to keep track of the timelines of each one of them and show the stakeholders the progress made.<br />
 
-## Available Scripts
+Back-End: [ChangeLogAPI](https://github.com/Int-Angel/ChangeLogAppAPI)<br />
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- User can sign up, sign in and sign out<br />
+- The user can create, read, udate and delete:<br />
+  - Projects<br />
+  - Updates<br />
+  - Points<br />
+- The API supports filters for the projects:<br />
+  - filter by creator<br />
+  - filter by name of the project<br />
+  - filter by publication date (you can filter by a range of dates or a specific date)<br />
+- The API supports pagination for all get methods:<br />
+  - Just need to specify limit and offset params in the query<br />
+- All end-points are protected with jwt authentication token, user should sign in first to get a auth token to be able to use all end-points<br />
+- An unauthenticated is not able to see projects or do modfications<br />
+- Every user is able to create, read, update and delete projects<br />
+- The API retursn data in JSON format<br />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Install [ChangeLogAPI](https://github.com/Int-Angel/ChangeLogAppAPI)<br />
+2. Clone this repo<br />
+3. Update proxy inside package.json
+4. run "npm install"<br />
+5. run "npm start"<br />
 
-### `npm test`
+## Images
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# change-log-app
+![SignIn](https://i.imgur.com/L2z7MW6.png)
+![SignUp](https://i.imgur.com/RiBa2r1.png)
+![Home](https://i.imgur.com/K5lpj7s.png)
+![Search](https://i.imgur.com/y2gN2kN.png)
+![SignOut](https://i.imgur.com/ww4C3uy.png)
+![Create Project](https://i.imgur.com/69PKLxx.png)
+![Create Update](https://i.imgur.com/bZnhBJh.png)
+![Edit](https://i.imgur.com/5gYYP67.png)
