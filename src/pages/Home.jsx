@@ -39,6 +39,24 @@ function Home() {
     setShowCreatePointForm(false);
   };
 
+  const handleDeleteProject = (project_id) => {
+    const deleteProjectURL = "http://localhost:8080/project/delete";
+    const token = localStorage.getItem("token");
+    axios.delete(deleteProjectURL, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      data: {
+        project_id: project_id,
+      },
+    });
+
+    const newList = projects.filter(
+      (project) => project.project_id !== project_id
+    );
+    setProjects(newList);
+  };
+
   useEffect(() => {
     const getProjectsURL = "http://localhost:8080/project/get";
     const token = localStorage.getItem("token");
@@ -75,6 +93,7 @@ function Home() {
         projects={projects}
         openCreateUpdate={handleCreateUpdate}
         openCreatePoint={handleCreatePoint}
+        onDelete={handleDeleteProject}
       />
     </div>
   );
