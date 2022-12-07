@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 function Register() {
@@ -23,7 +23,7 @@ function Register() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const signUpURL = "http://localhost:8080/auth/signup";
+    const signUpURL = "/auth/signup";
     const signUpPayload = {
       username: username,
       email: email,

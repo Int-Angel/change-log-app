@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import PointsList from "./PointsList";
 import { CgAdd } from "react-icons/cg";
 import { CgClose } from "react-icons/cg";
@@ -9,7 +9,7 @@ function UpdatesList({ updates, openCreatePoint }) {
   const [list, setList] = useState(updates);
 
   const handleDeleteUpdate = (project_update_id) => {
-    const deleteUpdateURL = "http://localhost:8080/update/delete";
+    const deleteUpdateURL = "/update/delete";
     const token = localStorage.getItem("token");
     axios.delete(deleteUpdateURL, {
       headers: {

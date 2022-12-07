@@ -26,7 +26,7 @@ function Update({ update }) {
     if (description === update.description) {
       return;
     }
-    const updateUpdateURL = "http://localhost:8080/update/update";
+    const updateUpdateURL = "/update/update";
     const token = localStorage.getItem("token");
     const updatePayload = {
       description: description,

@@ -10,7 +10,7 @@ function CreateUpdateForm({ closeForm, project_id }) {
   };
 
   const handleSubmit = (event) => {
-    const createUpdateURL = "http://localhost:8080/update/create";
+    const createUpdateURL = "/update/create";
     const token = localStorage.getItem("token");
     const updatePayload = {
       description: description,

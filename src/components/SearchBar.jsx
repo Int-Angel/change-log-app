@@ -14,7 +14,7 @@ function SearchBar({ setProjects, handleCreateProject }) {
   const [endDate, setEndDate] = useState(new Date());
 
   const handleSearch = () => {
-    const getProjectsURL = "http://localhost:8080/project/get";
+    const getProjectsURL = "/project/get";
     const params = {};
     if (projectName !== "") {
       params.name = projectName;
@@ -44,7 +44,7 @@ function SearchBar({ setProjects, handleCreateProject }) {
     setStartDate(null);
     setEndDate(null);
 
-    const getProjectsURL = "http://localhost:8080/project/get";
+    const getProjectsURL = "/project/get";
     const token = localStorage.getItem("token");
     const config = {
       headers: { Authorization: `Bearer ${token}` },

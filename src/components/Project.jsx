@@ -43,7 +43,7 @@ function Project({ project, openCreateUpdate, openCreatePoint, onDelete }) {
     if (project.name === title && description === project.description) {
       return;
     }
-    const updateProjectURL = "http://localhost:8080/project/update";
+    const updateProjectURL = "/project/update";
     const token = localStorage.getItem("token");
     const projectPayload = {
       name: title,

@@ -15,7 +15,7 @@ function CreateProjectForm({ closeForm }) {
   };
 
   const handleSubmit = () => {
-    const createProjectURL = "http://localhost:8080/project/create";
+    const createProjectURL = "/project/create";
     const token = localStorage.getItem("token");
     const projectPayload = {
       name: name,

@@ -7,7 +7,7 @@ function PointsList({ points }) {
   const [list, setList] = useState(points);
 
   const handleDeletePoint = (point_id) => {
-    const deletePointURL = "http://localhost:8080/point/delete";
+    const deletePointURL = "/point/delete";
     const token = localStorage.getItem("token");
     axios.delete(deletePointURL, {
       headers: {

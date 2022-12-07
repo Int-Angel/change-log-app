@@ -10,7 +10,7 @@ function Profile() {
   };
 
   const handleSignOut = () => {
-    const signOutURL = "http://localhost:8080/auth/signout";
+    const signOutURL = "/auth/signout";
     const token = localStorage.getItem("token");
     const config = {
       headers: { Authorization: `Bearer ${token}` },

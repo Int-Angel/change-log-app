@@ -39,7 +39,7 @@ function Home() {
   };
 
   const handleDeleteProject = (project_id) => {
-    const deleteProjectURL = "http://localhost:8080/project/delete";
+    const deleteProjectURL = "/project/delete";
     const token = localStorage.getItem("token");
     axios.delete(deleteProjectURL, {
       headers: {
@@ -57,7 +57,7 @@ function Home() {
   };
 
   useEffect(() => {
-    const getProjectsURL = "http://localhost:8080/project/get";
+    const getProjectsURL = "/project/get";
     const token = localStorage.getItem("token");
     const config = {
       headers: { Authorization: `Bearer ${token}` },

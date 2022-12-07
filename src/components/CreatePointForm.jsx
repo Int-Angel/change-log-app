@@ -10,7 +10,7 @@ function CreatePointForm({ closeForm, project_update_id }) {
   };
 
   const handleSubmit = (event) => {
-    const createPointURL = "http://localhost:8080/point/create";
+    const createPointURL = "/point/create";
     const token = localStorage.getItem("token");
     const pointPayload = {
       description: description,

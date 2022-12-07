@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate, Link, redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 function Login() {
@@ -18,7 +18,7 @@ function Login() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const signInURL = "http://localhost:8080/auth/signin";
+    const signInURL = "/auth/signin";
     const loginPayload = {
       username: username,
       pass: password,

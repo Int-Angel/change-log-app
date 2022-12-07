@@ -26,7 +26,7 @@ function Point({ point }) {
     if (description === point.description) {
       return;
     }
-    const updatePointURL = "http://localhost:8080/point/update";
+    const updatePointURL = "/point/update";
     const token = localStorage.getItem("token");
     const pointPayload = {
       description: description,
