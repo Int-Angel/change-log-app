@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PointsList from "./PointsList";
 import { CgAdd } from "react-icons/cg";
 import { CgClose } from "react-icons/cg";
 import axios from "axios";
+import Update from "./Update";
 
 function UpdatesList({ updates, openCreatePoint }) {
   const [list, setList] = useState(updates);
@@ -28,7 +29,7 @@ function UpdatesList({ updates, openCreatePoint }) {
   const listItems = list.map((update) => (
     <li className="update" key={update.project_update_id}>
       <div className="updateDescriptionContainer">
-        <div className="updateDescription">{update.description}</div>
+        <Update update={update} />
         <CgClose
           className="deleteUpdate"
           onClick={() => handleDeleteUpdate(update.project_update_id)}
