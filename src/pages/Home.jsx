@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import ProjectList from "../components/ProjectList";
 import TopBar from "../components/TopBar";
 import axios from "axios";
-import { CgAdd } from "react-icons/cg";
 import CreateProjectForm from "../components/CreateProjectForm";
 import CreateUpdateForm from "../components/CreateUpdateForm";
 import CreatePointForm from "../components/CreatePointForm";

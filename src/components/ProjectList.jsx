@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import Project from "./Project";
-import axios from "axios";
 
 function ProjectList({
   projects,
