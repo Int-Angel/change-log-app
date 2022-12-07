@@ -4,17 +4,28 @@ import TopBar from "../components/TopBar";
 import axios from "axios";
 import { CgAdd } from "react-icons/cg";
 import CreateProjectForm from "../components/CreateProjectForm";
+import CreateUpdateForm from "../components/CreateUpdateForm";
 
 function Home() {
   const [projects, setProjects] = useState([]);
-  const [showCreateForm, setShowCreateForm] = useState(false);
+  const [showCreateProjectForm, setShowCreateProjectForm] = useState(false);
+  const [showCreateUpdateForm, setShowCreateUpdateForm] = useState(false);
+  const [projectId, setProjectId] = useState();
 
   const handleCreateProject = () => {
-    setShowCreateForm(true);
+    setShowCreateProjectForm(true);
   };
 
   const handleCloseCreateProject = () => {
-    setShowCreateForm(false);
+    setShowCreateProjectForm(false);
+  };
+
+  const handleCreateUpdate = (project_id) => {
+    setProjectId(project_id, setShowCreateUpdateForm(true));
+  };
+
+  const handleCloseCreateUpdate = () => {
+    setShowCreateUpdateForm(false);
   };
 
   useEffect(() => {
@@ -34,10 +45,16 @@ function Home() {
         setProjects={setProjects}
         handleCreateProject={handleCreateProject}
       />
-      {showCreateForm ? (
+      {showCreateProjectForm ? (
         <CreateProjectForm closeForm={handleCloseCreateProject} />
       ) : null}
-      <ProjectList projects={projects} />
+      {showCreateUpdateForm ? (
+        <CreateUpdateForm
+          closeForm={handleCloseCreateUpdate}
+          project_id={projectId}
+        />
+      ) : null}
+      <ProjectList projects={projects} openCreateUpdate={handleCreateUpdate} />
     </div>
   );
 }

@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import ProgressPill from "./ProgressPill";
 import UpdatesList from "./UpdatesList";
 import { CgAdd } from "react-icons/cg";
+import CreateUpdateForm from "./CreateUpdateForm";
 
-function Project({ project }) {
+function Project({ project, openCreateUpdate }) {
   return (
     <div className="projectContainer">
       <div className="title">
@@ -23,7 +24,11 @@ function Project({ project }) {
         project_id={project.project_id}
       />
       <UpdatesList updates={project.project_updates} />
-      <CgAdd className="addUpdate" size={20} />
+      <CgAdd
+        className="addUpdate"
+        size={20}
+        onClick={() => openCreateUpdate(project.project_id)}
+      />
     </div>
   );
 }
