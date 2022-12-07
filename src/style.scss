@@ -160,6 +160,48 @@ p, h1, h2, h3, div {
         align-self: center;
         margin-top: 10px;
     }
+
+    .deleteProject{
+        align-self: flex-end;
+        cursor: pointer;
+        color: #0000000b;
+        &:hover{
+            color: #ff0000;
+        }
+    }
+}
+
+.updateDescriptionContainer{
+    display: flex;
+    flex-direction: column;
+
+    .deleteUpdate{
+        align-self: flex-end;
+        margin-top: -15px;
+
+        cursor: pointer;
+        color: #0000000b;
+        &:hover{
+            color: #ff0000;
+        }
+    }
+}
+
+.pointContainer{
+    display: flex;
+    flex-direction: column;
+
+    .deletePoint{
+        align-self: flex-end;
+        margin-right: 10px;
+        margin-top: -15px;
+
+        cursor: pointer;
+        color: #0000000b;
+        &:hover{
+            color: #ff0000;
+        }
+    }
 }
 
 .progressPill{

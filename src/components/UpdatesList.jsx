@@ -1,11 +1,15 @@
 import React from "react";
 import PointsList from "./PointsList";
 import { CgAdd } from "react-icons/cg";
+import { CgClose } from "react-icons/cg";
 
 function UpdatesList({ updates, openCreatePoint }) {
   const listItems = updates.map((update) => (
     <li className="update" key={update.project_update_id}>
-      <div className="updateDescription">{update.description}</div>
+      <div className="updateDescriptionContainer">
+        <div className="updateDescription">{update.description}</div>
+        <CgClose className="deleteUpdate" />
+      </div>
       <PointsList points={update.points} />
       <CgAdd
         className="addPoint"

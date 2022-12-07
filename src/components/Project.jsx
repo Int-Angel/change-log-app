@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import ProgressPill from "./ProgressPill";
 import UpdatesList from "./UpdatesList";
 import { CgAdd } from "react-icons/cg";
+import { CgClose } from "react-icons/cg";
 import CreateUpdateForm from "./CreateUpdateForm";
 
 function Project({ project, openCreateUpdate, openCreatePoint }) {
   return (
     <div className="projectContainer">
+      <CgClose className="deleteProject" />
       <div className="title">
         <h1>{project.name}</h1>
       </div>
