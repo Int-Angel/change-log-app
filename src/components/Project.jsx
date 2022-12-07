@@ -5,10 +5,13 @@ import { CgAdd } from "react-icons/cg";
 import { CgClose } from "react-icons/cg";
 import CreateUpdateForm from "./CreateUpdateForm";
 
-function Project({ project, openCreateUpdate, openCreatePoint }) {
+function Project({ project, openCreateUpdate, openCreatePoint, onDelete }) {
   return (
     <div className="projectContainer">
-      <CgClose className="deleteProject" />
+      <CgClose
+        className="deleteProject"
+        onClick={() => onDelete(project.project_id)}
+      />
       <div className="title">
         <h1>{project.name}</h1>
       </div>
