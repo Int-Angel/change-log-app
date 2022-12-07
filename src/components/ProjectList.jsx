@@ -1,10 +1,14 @@
 import React from "react";
 import Project from "./Project";
 
-function ProjectList({ projects, openCreateUpdate }) {
+function ProjectList({ projects, openCreateUpdate, openCreatePoint }) {
   const listItems = projects.map((project) => (
     <li className="projectItem" key={project.project_id}>
-      <Project project={project} openCreateUpdate={openCreateUpdate} />
+      <Project
+        project={project}
+        openCreateUpdate={openCreateUpdate}
+        openCreatePoint={openCreatePoint}
+      />
     </li>
   ));
   return (

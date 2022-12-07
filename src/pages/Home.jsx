@@ -5,12 +5,15 @@ import axios from "axios";
 import { CgAdd } from "react-icons/cg";
 import CreateProjectForm from "../components/CreateProjectForm";
 import CreateUpdateForm from "../components/CreateUpdateForm";
+import CreatePointForm from "../components/CreatePointForm";
 
 function Home() {
   const [projects, setProjects] = useState([]);
   const [showCreateProjectForm, setShowCreateProjectForm] = useState(false);
   const [showCreateUpdateForm, setShowCreateUpdateForm] = useState(false);
+  const [showCreatePointForm, setShowCreatePointForm] = useState(false);
   const [projectId, setProjectId] = useState();
+  const [projectUpdateId, setProjectUpdateId] = useState();
 
   const handleCreateProject = () => {
     setShowCreateProjectForm(true);
@@ -26,6 +29,14 @@ function Home() {
 
   const handleCloseCreateUpdate = () => {
     setShowCreateUpdateForm(false);
+  };
+
+  const handleCreatePoint = (project_update_id) => {
+    setProjectUpdateId(project_update_id, setShowCreatePointForm(true));
+  };
+
+  const handleCloseCreatePoint = () => {
+    setShowCreatePointForm(false);
   };
 
   useEffect(() => {
@@ -54,7 +65,17 @@ function Home() {
           project_id={projectId}
         />
       ) : null}
-      <ProjectList projects={projects} openCreateUpdate={handleCreateUpdate} />
+      {showCreatePointForm ? (
+        <CreatePointForm
+          closeForm={handleCloseCreatePoint}
+          project_update_id={projectUpdateId}
+        />
+      ) : null}
+      <ProjectList
+        projects={projects}
+        openCreateUpdate={handleCreateUpdate}
+        openCreatePoint={handleCreatePoint}
+      />
     </div>
   );
 }

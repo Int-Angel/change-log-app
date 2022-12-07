@@ -4,7 +4,7 @@ import UpdatesList from "./UpdatesList";
 import { CgAdd } from "react-icons/cg";
 import CreateUpdateForm from "./CreateUpdateForm";
 
-function Project({ project, openCreateUpdate }) {
+function Project({ project, openCreateUpdate, openCreatePoint }) {
   return (
     <div className="projectContainer">
       <div className="title">
@@ -23,7 +23,10 @@ function Project({ project, openCreateUpdate }) {
         progress_={project.project_status}
         project_id={project.project_id}
       />
-      <UpdatesList updates={project.project_updates} />
+      <UpdatesList
+        updates={project.project_updates}
+        openCreatePoint={openCreatePoint}
+      />
       <CgAdd
         className="addUpdate"
         size={20}

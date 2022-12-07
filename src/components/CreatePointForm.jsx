@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { CgClose } from "react-icons/cg";
 import axios from "axios";
 
-function CreateUpdateForm({ closeForm, project_id }) {
+function CreatePointForm({ closeForm, project_update_id }) {
   const [description, setDescription] = useState("");
 
   const handleChangeDescription = (event) => {
@@ -10,19 +10,19 @@ function CreateUpdateForm({ closeForm, project_id }) {
   };
 
   const handleSubmit = (event) => {
-    const createUpdateURL = "http://localhost:8080/update/create";
+    const createPointURL = "http://localhost:8080/point/create";
     const token = localStorage.getItem("token");
-    const updatePayload = {
+    const pointPayload = {
       description: description,
-      project_id: project_id,
+      project_update_id: project_update_id,
     };
     const config = {
       headers: { Authorization: `Bearer ${token}` },
     };
     axios
-      .post(createUpdateURL, updatePayload, config)
+      .post(createPointURL, pointPayload, config)
       .then((response) => {
-        console.log("Update Created");
+        console.log("Point Created");
       })
       .catch((err) => {
         console.log(err);
@@ -47,7 +47,7 @@ function CreateUpdateForm({ closeForm, project_id }) {
           <CgClose size={20} />
         </button>
 
-        <h1>Create Update</h1>
+        <h1>Create Point</h1>
 
         <div className="modal-body">
           <form onSubmit={handleSubmit}>
@@ -59,7 +59,7 @@ function CreateUpdateForm({ closeForm, project_id }) {
             />
             <div className="form-group">
               <button className="submitButton" type="submit">
-                Create Update
+                Create Point
               </button>
             </div>
           </form>
@@ -69,4 +69,4 @@ function CreateUpdateForm({ closeForm, project_id }) {
   );
 }
 
-export default CreateUpdateForm;
+export default CreatePointForm;
